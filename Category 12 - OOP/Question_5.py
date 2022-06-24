@@ -1,10 +1,6 @@
-"""
-Define property that should have the same value for every class instance
-Define a class attribute ”color” with a default value white. I.e., Every Vehicle should be white.
-"""
-
-
 class Vehicle:
+
+    color = "white"
 
     def __init__(self, name, max_speed, mileage):
         self.name = name
@@ -18,3 +14,11 @@ class Bus(Vehicle):
 
 class Car(Vehicle):
     pass
+
+
+school_bus = Bus("Benz", 110, 11)
+print(school_bus.color, school_bus.name,
+      school_bus.max_speed, school_bus.mileage)
+
+car = Car("Lambo", 380, 11)
+print(car.color, car.name, car.max_speed, car.mileage)
